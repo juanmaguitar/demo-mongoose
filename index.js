@@ -8,9 +8,17 @@ const getCatById = require('./handlers/getCatById')
 const updateCat = require('./handlers/updateCat')
 const removeCat = require('./handlers/removeCat')
 
-addCat()
+const getShortNameCats = require('./handlers/getShortNameCats')
+
+getShortNameCats(6)
   .then( result => console.log(result) )
   .catch( err => console.log(err) )
+
+
+// addCat('Antonio')
+//   .then( () => getCats() )
+//   .then( result => console.log(result) )
+//   .catch( err => console.log(err) )
 
 // getCats()
 //   .then( result => console.log(result) )
