@@ -12,7 +12,7 @@ const schemaCat = new Schema({
   }
 })
 
-schemaCat.statics.findShortNames = function(length) {
+schemaCat.statics.getCatsNamesByMaxLengthName = function(length) {
   return this.find()
                 .then( cats => cats.filter( cat => {
                   const lengtName = cat.name ? cat.name.length : 0
